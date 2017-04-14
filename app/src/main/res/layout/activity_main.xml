@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="tcss450.uw.edu.dialoglab.MainActivity">
+    tools:context="tcss450.uw.edu.dialoglab.MainActivity"
+    android:layout_weight="1"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/fire_missiles_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "@string/launch_fire_missiles"
+        android:onClick="launch"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/list_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="launch"
+        android:text="@string/launch_colors"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -15,4 +36,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</android.support.constraint.ConstraintLayout>
+
+
+</LinearLayout>

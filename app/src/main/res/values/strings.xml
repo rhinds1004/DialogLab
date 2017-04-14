@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">DialogLab</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--fire  strings-->
+    <string name="dialog_fire_missiles">Fire Missiles!!</string>
+    <string name="fire">Fire</string>
+    <string name="cancel">Cancel</string>
+    <!--color picker  strings-->
+    <string name="pick_color">Pick a Color</string>
+
+    <array name="colors_array">
+        <item name="red">Red</item>
+        <item name="Green">Green</item>
+        <item name="Blue">Blue</item>
+    </array>
+    <!--buttons texts-->
+    <string name="launch_fire_missiles">Launch Fire Missiles</string>
+    <string name="launch_colors">Launch Colors</string>
 </resources>
