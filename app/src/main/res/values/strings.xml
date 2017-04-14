@@ -15,7 +15,17 @@
         <item name="Green">Green</item>
         <item name="Blue">Blue</item>
     </array>
+    <!--toppings strings-->
+    <string name="pick_toppings">Pick Toppings</string>
+    <array name ="toppings_array">
+        <item name ="pepperoni">Pepperoni</item>
+        <item name ="mushrooms">Mushrooms</item>
+        <item name ="peppers">Peppers</item>
+    </array>
+    <string name="ok">Okay</string>
+
     <!--buttons texts-->
     <string name="launch_fire_missiles">Launch Fire Missiles</string>
     <string name="launch_colors">Launch Colors</string>
+    <string name = "launch_multi_dialog">Launch Multiple Dialog</string>
 </resources>

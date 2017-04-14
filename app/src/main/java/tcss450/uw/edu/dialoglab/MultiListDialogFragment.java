@@ -1,19 +1,28 @@
 package tcss450.uw.edu.dialoglab;
 
 
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link MultiListDialogFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MultiListDialogFragment extends Fragment {
+public class MultiListDialogFragment extends DialogFragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -56,11 +65,49 @@ public class MultiListDialogFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        TextView textView = new TextView(getActivity());
-        textView.setText(R.string.hello_blank_fragment);
-        return textView;
+    public Dialog onCreateDialog(Bundle savedInstanceState){
+        final List mSelectItems = new ArrayList(); //tracks selected items
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        //set dialog title
+        builder.setTitle(R.string.pick_toppings)
+        //Specify the list array. The items to be select by default (null for none).
+        //The listener receives callbacks when item(s) are selected
+        .setMultiChoiceItems(R.array.toppings_array, null, new DialogInterface.OnMultiChoiceClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+                if(isChecked){
+                    //if user checked item, add it to the selected items
+                    mSelectItems.add(which);
+                } else if (mSelectItems.contains(which)) {
+                    //if item is already in array remove it
+                    mSelectItems.remove(Integer.valueOf(which));
+                }
+            }
+        })
+        //setup buttons
+        .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //User clicked Okay, save mSelectedItems results somewhere
+                //or return them to the component that opened the dialog
+                Resources res = getActivity().getResources();
+                String[] toppings = res.getStringArray(R.array.toppings_array);
+                StringBuilder builder = new StringBuilder();
+                for(int i = 0; i< mSelectItems.size(); i++){
+                    builder.append(toppings[(int) mSelectItems.get(i)]);
+                    builder.append(" ");
+                }
+                Toast.makeText(getActivity(), builder.toString(), Toast.LENGTH_LONG)
+                        .show();
+            }
+        })
+       .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+           @Override
+           public void onClick(DialogInterface dialog, int which) {
+
+           }
+       });
+    return builder.create();
     }
 
 }
