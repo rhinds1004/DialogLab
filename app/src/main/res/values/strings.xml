@@ -37,5 +37,6 @@
     <string name="launch_colors">Launch Colors</string>
     <string name="launch_multi_dialog">Launch Multiple Dialog</string>
     <string name="launch_custom_dialog">Launch Custom Dialog</string>
+    <string name = "launch_time_picker_dialog">Launch Time Dialog</string>
 
 </resources>

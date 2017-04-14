@@ -27,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
         else if(view.getId() == R.id.custom_button){
             fragment = new CustomDialogFragment();
         }
+        else if(view.getId() == R.id.time_button){
+            fragment = new TimePickerDialogFragment();
+        }
 
         if(fragment != null)
             fragment.show(getSupportFragmentManager(), "launch");
