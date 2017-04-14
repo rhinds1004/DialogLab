@@ -24,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
         else if(view.getId() == R.id.multi_list_button){
             fragment = new MultiListDialogFragment();
         }
+        else if(view.getId() == R.id.custom_button){
+            fragment = new CustomDialogFragment();
+        }
 
         if(fragment != null)
             fragment.show(getSupportFragmentManager(), "launch");

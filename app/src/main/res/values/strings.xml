@@ -3,10 +3,12 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <!--fire  strings-->
     <string name="dialog_fire_missiles">Fire Missiles!!</string>
     <string name="fire">Fire</string>
     <string name="cancel">Cancel</string>
+
     <!--color picker  strings-->
     <string name="pick_color">Pick a Color</string>
 
@@ -15,17 +17,25 @@
         <item name="Green">Green</item>
         <item name="Blue">Blue</item>
     </array>
+
     <!--toppings strings-->
     <string name="pick_toppings">Pick Toppings</string>
-    <array name ="toppings_array">
-        <item name ="pepperoni">Pepperoni</item>
-        <item name ="mushrooms">Mushrooms</item>
-        <item name ="peppers">Peppers</item>
+    <array name="toppings_array">
+        <item name="pepperoni">Pepperoni</item>
+        <item name="mushrooms">Mushrooms</item>
+        <item name="peppers">Peppers</item>
     </array>
     <string name="ok">Okay</string>
+
+    <!--custom dialog strings-->
+    <string name="username">Enter username</string>
+    <string name="password">Enter password</string>
+    <string name="signin">Sign In</string>
 
     <!--buttons texts-->
     <string name="launch_fire_missiles">Launch Fire Missiles</string>
     <string name="launch_colors">Launch Colors</string>
-    <string name = "launch_multi_dialog">Launch Multiple Dialog</string>
+    <string name="launch_multi_dialog">Launch Multiple Dialog</string>
+    <string name="launch_custom_dialog">Launch Custom Dialog</string>
+
 </resources>
