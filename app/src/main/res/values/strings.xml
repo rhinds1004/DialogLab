@@ -31,12 +31,23 @@
     <string name="username">Enter username</string>
     <string name="password">Enter password</string>
     <string name="signin">Sign In</string>
+    <!--notification strings-->
+
+    <string name="my_notification_title">Notification</string>
+
+    <string name="my_notification_placeholder_text">Winning!</string>
+
+    <string name="action_share">Share</string>
+    <string name="action_reply">Reply</string>
 
     <!--buttons texts-->
     <string name="launch_fire_missiles">Launch Fire Missiles</string>
     <string name="launch_colors">Launch Colors</string>
     <string name="launch_multi_dialog">Launch Multiple Dialog</string>
     <string name="launch_custom_dialog">Launch Custom Dialog</string>
-    <string name = "launch_time_picker_dialog">Launch Time Dialog</string>
+    <string name="launch_time_picker_dialog">Launch Time Dialog</string>
+    <string name="launch_date_picker_dialog">Launch Date Dialog</string>
+    <string name="launch_notification">Launch Notification</string>
+
 
 </resources>
